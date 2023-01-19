@@ -8,18 +8,18 @@ const sleep = async msec => new Promise(resolve => setTimeout(resolve, msec))
 console.log('Puppeteer starting');
 
 puppeteer.use(StealthPlugin());
-puppeteer.launch({
-  devtools: true,
-  headless: true,
-  product: 'chrome',
-  args: ['--start-maximized'],
-  defaultViewport: {
-    width: 1700,
-    height: 800
-  },
-  //slowMo: 1000,
-  executablePath: require('puppeteer').executablePath()
-}).then(async function (browser) {
+
+if (data.debug) 
+  browseropts = JSON.stringify(data.browserOptions.debug)
+
+else 
+  browseropts = JSON.stringify(data.browserOptions.headless)
+
+
+browseropts = browseropts.substring(1,browseropts.length-1)
+console.log(browseropts)
+
+puppeteer.launch({ browseropts, executablePath: require('puppeteer').executablePath() }).then(async function (browser) {
 
 
   //create a load_page function that returns a promise which resolves when page is ready

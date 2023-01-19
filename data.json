@@ -1,23 +1,27 @@
-{   
- "urls" : [ "https://www.christianscotti.com/",
-         "https://www.christianscotti.com/responsive-images/not-responsive.html",
-         "https://www.christianscotti.com/responsive-images/responsive.html" ],
- "debug" : false,
- "refreshRate": 3000,
- "browserOptions": {
-           "headless": {
-           "headless": true,
-           "defaultViewport": null,
-           "ignoreHTTPSErrors": "true",
+{
+    "urls": [
+        "https://www.christianscotti.com/",
+        "https://www.christianscotti.com/responsive-images/not-responsive.html",
+        "https://www.christianscotti.com/responsive-images/responsive.html"
+    ],
+    "debug": true,
+    "refreshRate": 3000,
+    "browserOptions": {
+        "headless": {
+            "headless": true,
+            "defaultViewport": null,
+            "ignoreHTTPSErrors": "true",
             "args": [
-                      "--no-sandbox",
-                      "--ignore-certifcate-errors"
-                    ]
-            },
-           "debug": {
-             "headless": false,
-             "args": ["--start-maximized"],
-             "defaultViewport": null
-           }
-}
+                "--no-sandbox",
+                "--ignore-certifcate-errors"
+            ]
+        },
+        "debug": {
+            "headless": false,
+            "args": [
+                "--start-maximized"
+            ],
+            "defaultViewport": null
+        }
+    }
 }
