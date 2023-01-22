@@ -9,17 +9,8 @@ console.log('Puppeteer starting');
 
 puppeteer.use(StealthPlugin());
 
-if (data.debug) 
-  browseropts = JSON.stringify(data.browserOptions.debug)
 
-else 
-  browseropts = JSON.stringify(data.browserOptions.headless)
-
-
-browseropts = browseropts.substring(1,browseropts.length-1)
-console.log(browseropts)
-
-puppeteer.launch({ browseropts, executablePath: require('puppeteer').executablePath() }).then(async function (browser) {
+puppeteer.launch(data.debug ? data.browserOptions.debug : data.browserOptions.headless).then(async function (browser) {
 
 
   //create a load_page function that returns a promise which resolves when page is ready

@@ -18,10 +18,12 @@
         },
         "debug": {
             "headless": false,
+            "devtools": true,
             "args": [
                 "--start-maximized"
             ],
-            "defaultViewport": null
+            "defaultViewport": { "width": 1700, "height": 800},
+            "slowMo": 1000
         }
     }
 }
