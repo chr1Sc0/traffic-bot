@@ -6,6 +6,7 @@
     ],
     "debug": true,
     "refreshRate": 3000,
+    "stealth": true.
     "browserOptions": {
         "headless": {
             "headless": true,

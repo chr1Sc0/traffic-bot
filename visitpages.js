@@ -2,35 +2,34 @@ const puppeteer = require('puppeteer-extra');
 const StealthPlugin = require('puppeteer-extra-plugin-stealth')
 const data = require('./data.json')
 
+// sleep function
 const sleep = async msec => new Promise(resolve => setTimeout(resolve, msec))
 
-//launch puppeteer, do everything in .then() handler
+
 console.log('Puppeteer starting');
 
-puppeteer.use(StealthPlugin());
+// Load Stealth Plugin from data file
+if (data.stealth) puppeteer.use(StealthPlugin());
 
-
+//launch puppeteer, do everything in .then() handler
 puppeteer.launch(data.debug ? data.browserOptions.debug : data.browserOptions.headless).then(async function (browser) {
 
 
   //create a load_page function that returns a promise which resolves when page is ready
-  async function load_page(u) {
-    const url = u;
+  async function load_page(url) {
     return new Promise(async function (resolve, reject) {
+      // Stealth plugin needs to be opened in a new page
       const page = await browser.newPage();
       console.log('Opened page');
-      await page.setViewport({
-        width: 1280,
-        height: 800,
-        isMobile: false
-      });
-
+   
+      //wait for the promise to resolve after networkidle2 fires
       await Promise.all([
         page.goto(url, {
           "waitUntil": ["load", "networkidle2"]
         }),
       ]);
       console.log('Page loaded');
+      //extra sleep to allow mPulse beacons to fire
       await sleep(500);
       await page.close();
       console.log('Page closed');
