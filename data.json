@@ -4,7 +4,9 @@
         "https://www.christianscotti.com/responsive-images/not-responsive.html",
         "https://www.christianscotti.com/responsive-images/responsive.html"
     ],
-    "debug": true,
+    "logging" : false,
+    "waitTimems" : 500,
+    "debug": false,
     "stealth": true,
     "refreshRate": 3000,
     "browserOptions": {
