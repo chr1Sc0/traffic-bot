@@ -12,13 +12,13 @@ console.log('Puppeteer starting');
 if (data.stealth) puppeteer.use(StealthPlugin());
 
 //launch puppeteer, do everything in .then() handler
-puppeteer.launch(data.debug ? data.browserOptions.debug : data.browserOptions.headless).then(async function (browser) {
-
+puppeteer.launch(data.debug ? data.browserOptions.debug : data.browserOptions.headless)
+    .then(async function (browser) {
 
   //create a load_page function that returns a promise which resolves when page is ready
   async function load_page(url) {
     return new Promise(async function (resolve, reject) {
-      // Stealth plugin needs to be opened in a new page
+      // Stealth plugin needs to be opened in a new page 
       const page = await browser.newPage();
       console.log('Opened page');
    
