@@ -1,0 +1,36 @@
+{
+    "logging": true,
+    "debug": false,
+    "waitTimems": 500,
+    "stealth": true,
+    "refreshRate": 3000,
+    "browserOptions": {
+        "headless": {
+            "executablePath": "/usr/local/bin/chromium",
+            "headless": true,
+            "defaultViewport": null,
+            "ignoreHTTPSErrors": "true",
+            "args": [
+                "--no-sandbox",
+                "--disable-setuid-sandbox",
+                "--ignore-certifcate-errors"
+            ]
+        },
+        "debug": {
+            "executablePath": "/usr/local/bin/chromium",
+            "headless": false,
+            "devtools": true,
+            "args": [
+                "--no-sandbox",
+                "--disable-setuid-sandbox",
+                "--ignore-certifcate-errors",
+                "--start-maximized"
+            ],
+            "defaultViewport": {
+                "width": 1700,
+                "height": 800
+            },
+            "slowMo": 1000
+        }
+    }
+}
