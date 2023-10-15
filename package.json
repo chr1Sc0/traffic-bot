@@ -1,5 +1,29 @@
 {
+  "name": "traffic-bot",
+  "version": "1.0.0",
+  "author": "chr1Sc0",
+  "license": "MIT",
+  "description": "A bot that generates artificial traffic to a set of defined urls",
+  "main": "./index.js",
+  "scripts": {
+    "start": "forever start --minUptime 1000 --spinSleepTime 500 index.js",
+    "stop":  "forever stop index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chr1Sc0/traffic-bot.git"
+  },
+  "keywords": [
+    "bot",
+    "puppeteer"
+  ],
+  "bugs": {
+    "url": "https://github.com/chr1Sc0/traffic-bot/issues"
+  },
+  "homepage": "https://github.com/chr1Sc0/traffic-bot7#readme",
   "dependencies": {
+    "forever": "^4.0.3",
+    "nodemon": "^3.0.1",
     "puppeteer": "^15.5.0",
     "puppeteer-extra": "^3.3.4",
     "puppeteer-extra-plugin-stealth": "^2.11.1"
