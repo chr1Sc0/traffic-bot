@@ -9,7 +9,7 @@ const sleep = async msec => new Promise(resolve => setTimeout(resolve, msec))
 module.exports = class Bot {
 
   async run() {
-    // Load Stealth Plugin from data file
+    // Load Stealth Plugin setting from config file
     if (config.stealth) puppeteer.use(StealthPlugin());
 
     //launch puppeteer, do everything in .then() handler

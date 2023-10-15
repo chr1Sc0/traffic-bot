@@ -31,14 +31,23 @@ on the project folder. You need to edit the URL list in the data.json file in th
     ]
 }
 ```
+Adapt settings in the config.json file:
+
+```json
+"logging": true,      # Enable logging output 
+"debug": false,       # Enable debug mode to run in non headlesss mode
+"waitTimems": 500,    # Wait milliseconds after page loaded event
+"stealth": true,      # Run stealth mode plugin to mask bots
+"refreshRate": 3000, 
+```
 
 Finally run `npm start` and let it work
 
 ## Known errors
 
-### Puppeteer on UNIX
+### Puppeteer on Linux
 
-If you are working with the bot on ARM architecture you possibly won't be able to work with the chromium build provided by puppeteer itself. To solve it you will need to install Chromium from an external source. You can do it with the default package manager on your UNIX flavour. By default, on Ubuntu/Debin you can do it like this:
+If you are working with the bot on ARM architecture you possibly won't be able to work with the chromium build provided by puppeteer itself. To solve it you will need to install Chromium from an external source. You can do it with the default package manager on your Linux flavour. By default, on Ubuntu/Debin you can do it like this:
 
 ```
 sudo apt install chromium-browser
@@ -69,4 +78,4 @@ Once you've got Chromium's path (by default it's /usr/bin/chromium-browser), you
 }
 ```
 
-Bot should now work properly.
+The bot should now work properly.
