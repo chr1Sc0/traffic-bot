@@ -26,7 +26,7 @@ on the project folder. You need to edit the URL list in the data.json file in th
 ```javascript
 {
     "urls": [
-         "https://www.example.com/",
+        "https://www.example.com/",
         "https://www.example.com/?test=1",
         "https://www.example.com/?user=jdoe&password=abc123"
     ]
@@ -37,9 +37,8 @@ and adapt these settings according to your needs in the config.json file:
 ```json
 "logging": true,      # Enable logging output 
 "debug": false,       # Enable debug mode to run in non headlesss mode
-"waitTimems": 500,    # Wait milliseconds after page loaded event
-"stealth": true,      # Run stealth mode plugin to mask bots
-"refreshRate": 3000, 
+"waitTime": 500,    # Wait milliseconds after page loaded event
+"stealth": true      # Run stealth mode plugin to mask bots
 ```
 
 Finally run `npm start` and let it work
