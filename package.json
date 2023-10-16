@@ -7,7 +7,7 @@
   "main": "./index.js",
   "scripts": {
     "start": "forever start --minUptime 1000 --spinSleepTime 500 index.js",
-    "stop":  "forever stop index.js"
+    "stop": "forever stop index.js"
   },
   "repository": {
     "type": "git",
@@ -22,10 +22,10 @@
   },
   "homepage": "https://github.com/chr1Sc0/traffic-bot7#readme",
   "dependencies": {
-    "minimist": ">=0.2.4",
-    "nconf": ">=0.11.4",
-    "glob-parent": ">=5.1.2",
     "forever": "^4.0.3",
+    "glob-parent": ">=5.1.2",
+    "nconf": ">=0.11.4",
+    "minimist": ">=1.2.6",
     "puppeteer": "^15.5.0",
     "puppeteer-extra": "^3.3.4",
     "puppeteer-extra-plugin-stealth": "^2.11.1"

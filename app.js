@@ -32,7 +32,7 @@ module.exports = class Bot {
             ]);
             if (config.logging) console.log('Page loaded');
             //extra sleep to allow mPulse beacons to fire
-            await sleep(config.waitTimems);
+            await sleep(config.waitTime);
             await page.close();
             if (config.logging) console.log('Page closed');
             resolve();

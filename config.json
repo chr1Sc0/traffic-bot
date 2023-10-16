@@ -1,12 +1,11 @@
 {
     "logging": true,
     "debug": false,
-    "waitTimems": 500,
+    "waitTime": 500,
     "stealth": true,
-    "refreshRate": 3000,
     "browserOptions": {
         "headless": {
-            "executablePath": "/usr/local/bin/chromium",
+            "executablePath": "/usr/bin/chromium",
             "headless": true,
             "defaultViewport": null,
             "ignoreHTTPSErrors": "true",
@@ -17,7 +16,7 @@
             ]
         },
         "debug": {
-            "executablePath": "/usr/local/bin/chromium",
+            "executablePath": "/usr/bin/chromium",
             "headless": false,
             "devtools": true,
             "args": [
