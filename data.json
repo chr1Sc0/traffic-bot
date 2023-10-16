@@ -1,7 +1,7 @@
 {
     "urls": [
-        "https://www.christianscotti.com/",
-        "https://www.christianscotti.com/responsive-images/not-responsive.html",
-        "https://www.christianscotti.com/responsive-images/responsive.html"
+        "https://www.example.com/",
+        "https://www.example.com/?test=1",
+        "https://www.example.com/?user=jdoe&password=abc123"
     ]
 }

@@ -23,7 +23,6 @@
   "homepage": "https://github.com/chr1Sc0/traffic-bot7#readme",
   "dependencies": {
     "forever": "^4.0.3",
-    "nodemon": "^3.0.1",
     "puppeteer": "^15.5.0",
     "puppeteer-extra": "^3.3.4",
     "puppeteer-extra-plugin-stealth": "^2.11.1"
