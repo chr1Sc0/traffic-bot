@@ -22,6 +22,9 @@
   },
   "homepage": "https://github.com/chr1Sc0/traffic-bot7#readme",
   "dependencies": {
+    "minimist": ">=0.2.4",
+    "nconf": ">=0.11.4",
+    "glob-parent": ">=5.1.2",
     "forever": "^4.0.3",
     "puppeteer": "^15.5.0",
     "puppeteer-extra": "^3.3.4",
