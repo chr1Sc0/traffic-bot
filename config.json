@@ -1,5 +1,5 @@
 {
-    "logging": true,
+    "logging": false,
     "debug": false,
     "waitTime": 500,
     "stealth": true,
@@ -18,17 +18,13 @@
         "debug": {
             "executablePath": "/usr/bin/chromium",
             "headless": false,
-            "devtools": true,
+            "devtools": false,
             "args": [
                 "--no-sandbox",
                 "--disable-setuid-sandbox",
                 "--ignore-certifcate-errors",
                 "--start-maximized"
             ],
-            "defaultViewport": {
-                "width": 1700,
-                "height": 800
-            },
             "slowMo": 1000
         }
     }

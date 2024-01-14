@@ -31,6 +31,26 @@ module.exports = class Bot {
               }),
             ]);
             if (config.logging) console.log('Page loaded');
+
+            //Scroll to the bottom of the page for GA to fire
+            let prevHeight = -1;
+            let maxScrolls = 100;
+            let scrollCount = 0;
+
+            while (scrollCount < maxScrolls) {
+              // Scroll to the bottom of the page
+              await page.evaluate('window.scrollTo(0, document.body.scrollHeight)');
+              // Wait for page load
+              //await page.waitForTimeout(1000);
+              // Calculate new scroll height and compare
+              let newHeight = await page.evaluate('document.body.scrollHeight');
+              if (newHeight == prevHeight) {
+                break;
+              }
+              prevHeight = newHeight;
+              scrollCount += 1;
+            }
+
             //extra sleep to allow mPulse beacons to fire
             await sleep(config.waitTime);
             await page.close();
