@@ -24,9 +24,9 @@
   "homepage": "https://github.com/chr1Sc0/traffic-bot7#readme",
   "dependencies": {
     "forever": "^4.0.3",
-    "puppeteer": "^15.5.0",
-    "puppeteer-extra": "^3.3.4",
-    "puppeteer-extra-plugin-stealth": "^2.11.1"
+    "puppeteer": "^21.7.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
   },
   "resolutions": {
     "minimist": ">=1.2.6",
