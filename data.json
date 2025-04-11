@@ -1,0 +1,7 @@
+{
+    "urls": [
+        "https://www.example.com/",
+        "https://www.example.com/?test=1",
+        "https://www.example.com/?user=jdoe&password=abc123"
+    ]
+}
