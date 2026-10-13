@@ -5,6 +5,9 @@
   "license": "MIT",
   "description": "A bot that generates artificial traffic to a set of defined urls",
   "main": "./index.js",
+  "engines": {
+    "node": ">=22.12.0"
+  },
   "scripts": {
     "start": "NODE_NO_WARNINGS=1 forever start --minUptime 1000 --spinSleepTime 500 index.js",
     "stop": "forever stop index.js"
@@ -23,16 +26,14 @@
   "homepage": "https://github.com/chr1Sc0/traffic-bot7#readme",
   "dependencies": {
     "forever": "4.0.3",
-    "puppeteer": "24.6.1",
+    "puppeteer": "25.13.0",
     "puppeteer-extra": "3.3.6",
     "puppeteer-extra-plugin-stealth": "^2.11.2"
   },
   "overrides": {
-    "braces": "^3.0.3",
     "minimist": "^1.2.6",
-    "chokidar": "^3.5.3",
+    "chokidar": "^4.0.3",
     "micromatch": "^4.0.8",
-    "nconf": "^0.12.0",
-    "js-yaml": "^5.4.2"
+    "nconf": "^0.12.0"
   }
 }

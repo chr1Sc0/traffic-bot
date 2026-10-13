@@ -6,7 +6,7 @@ A small bot to generate artificial traffic to a set of predefined URLs
 
 ## How-to
 
-You need to have NodeJs installed. You can install it [here](https://nodejs.org/es/download/)
+You need Node.js 22.12.0 or newer (required by Puppeteer 25). You can install it [here](https://nodejs.org/en/download/).
 It's also recommended to install a standalone version of Chromium (See Puppeteer on Linux)
 
 Open the console and type
@@ -18,7 +18,7 @@ cd [directory of the project, e.g /usr/app/ or C://app]
 Then install the node modules with the command
 
 ```console
-npm install
+npm ci
 ```
 
 on the project folder. You need to edit the URL list in the data.json file in the root directory.
@@ -42,6 +42,13 @@ and adapt these settings according to your needs in the config.json file:
 ```
 
 Finally run `npm start` and let it work
+
+## Dependency security
+
+Run `npm audit` to check the locked dependencies against current security advisories.
+Puppeteer 25 removes the vulnerable `extract-zip`, FTP proxy, and `js-yaml` dependency chains.
+The Chokidar 4 override removes the unpatched `braces` parser from Forever's watcher;
+directory watching is supported, but glob patterns in watch paths are no longer supported.
 
 ## Known errors
 
