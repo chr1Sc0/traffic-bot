@@ -106,3 +106,6 @@ dist
 # MacOS 
 .DS_Store
 chrome/mac_arm-135.0.7049.84/
+
+# Claude Settings
+.claude/
